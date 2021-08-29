@@ -1,0 +1,10 @@
+2021-08-30 04:45:24,982 [main] INFO weatherInfo - ********** Opening URL *************
+2021-08-30 04:45:37,714 [main] INFO weatherInfo - ********** User got temperature from Accu Weather App *************26.0
+2021-08-30 04:45:37,907 [main] INFO weatherInfo - ******** User Quits the browser ***********
+2021-08-30 04:45:39,728 [main] INFO weatherInfo - *********** temperature from openweather map api *************25.990015029907227
+2021-08-30 04:45:39,731 [main] INFO weatherInfo - ********** temperature from both the apps are same *************
+2021-08-30 04:49:17,056 [main] INFO weatherInfo - ********** Opening URL *************
+2021-08-30 04:49:29,031 [main] INFO weatherInfo - ********** User got temperature from Accu Weather App *************26.0
+2021-08-30 04:49:29,148 [main] INFO weatherInfo - ******** User Quits the browser ***********
+2021-08-30 04:49:32,142 [main] INFO weatherInfo - *********** temperature from openweather map api *************25.990015029907227
+2021-08-30 04:49:32,144 [main] INFO weatherInfo - ********** temperature from both the apps are same *************
