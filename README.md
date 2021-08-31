@@ -18,7 +18,8 @@ Logging: log4j
 
 Reporting: cucumber reporting
 
-
+# Execution
+hit the command on terminal to start the execution "Mvn clean install "-Dcucumber.options=--tags @AllTest" "
 
 # Reporting
 
