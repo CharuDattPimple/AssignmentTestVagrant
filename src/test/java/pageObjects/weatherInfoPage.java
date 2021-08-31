@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import utilities.waitHelper;
+import utilities.InvalidTemperatureDiffException;
 
 public class weatherInfoPage {
   public WebDriver driver;
@@ -35,20 +36,24 @@ public class weatherInfoPage {
 
   }
 
-  public boolean compareTemperature(double temperatureFromAccuWeatherApp, double TemperatureFromApi) {
+  public boolean compareTemperature(double temperatureFromAccuWeatherApp, double TemperatureFromApi) throws InvalidTemperatureDiffException{
 
     boolean diffvalue = false;
 
     if (temperatureFromAccuWeatherApp != TemperatureFromApi) {
 
-      double tempDiff = Math.abs(temperatureFromAccuWeatherApp - TemperatureFromApi);
+          double tempDiff = Math.abs(temperatureFromAccuWeatherApp - TemperatureFromApi);
 
-      if (tempDiff <= 1) {
-        diffvalue = true;
-      }
+          if (tempDiff <= 1) {
+            diffvalue = true;
+          }
+        else{
+          throw new InvalidTemperatureDiffException("Differnce between two temperature sources are mor than expected"+tempDiff);
+          }
 
     }
 
     return diffvalue;
   }
 }
+

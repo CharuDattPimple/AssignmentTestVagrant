@@ -21,6 +21,7 @@ import java.util.Properties;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.Assert;
+import utilities.InvalidTemperatureDiffException;
 
 public class weatherInfoSteps extends baseClass {
 
@@ -102,8 +103,13 @@ public class weatherInfoSteps extends baseClass {
 
   @Then("Temperature from both sources should equal")
   public void temperature_from_both_sources_should_equal() {
-    Assert.assertTrue(weatherInfoPage.compareTemperature(temperatureFromAccuWeatherApp, temperatureFromApi));
-    logger.info("********** temperature from both the apps are same *************");
+    try {
+      Assert.assertTrue(weatherInfoPage.compareTemperature(temperatureFromAccuWeatherApp, temperatureFromApi));
+      logger.info("********** temperature from both the apps are  same *************");
+    }catch(InvalidTemperatureDiffException e){
+
+      logger.info("********** temperature from both the apps are not same *************"+e);
+    }
   }
 
 }
