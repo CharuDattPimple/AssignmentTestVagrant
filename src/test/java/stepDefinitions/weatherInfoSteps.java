@@ -68,9 +68,9 @@ public class weatherInfoSteps extends baseClass {
   @When("User search weather information for {string} city")
   public void user_search_weather_information_for_city(String cityName) throws InterruptedException {
     weatherInfoPage.searchTemperature(cityName);
-    String temperature = weatherInfoPage.getTemperature();
-    String s = temperature.substring(0, 2);
-    temperatureFromAccuWeatherApp = Double.parseDouble(s);
+    String temperatureInCelcius = weatherInfoPage.getTemperature();
+    String temperature = temperatureInCelcius.substring(0, 2);
+    temperatureFromAccuWeatherApp = Double.parseDouble(temperature);
     logger.info("********** User got temperature from Accu Weather App *************" + temperatureFromAccuWeatherApp);
   }
 
