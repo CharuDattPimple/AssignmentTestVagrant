@@ -1,4 +1,4 @@
-# Selenium-Cucumber-nopcommerce
+# Selenium-Rest Assured Weather Comparator
 
 # Tools and technology used
 
